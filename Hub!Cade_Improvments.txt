@@ -1,0 +1,117 @@
+These are the base changes from the initial fork of MameHub GUI code and the server rewrite.
+
+Security:
+1) SSL for encrypted network communication between GUI and backend server
+2) Email address for users no longer sent to all clients
+
+Eye Candy:
+1) Notebooks changed to auinotebooks for looks and functionality of removing/adding panels
+2) Save state support in Game Info display shows Green for good, Red for bad (Will override selected color in GUI options)
+3) Streamlined the login/server dialog to one smaller form with less entry fields
+4) Font selection for Game Info display
+5) Display image for base operating system (Windows, Mac, Linux) of users that are logged in
+6) If flag doesn't exist for country display question mark
+
+New Features:
+1) Multi directory selection for set folders dialog
+2) Display monitor width, height, refresh rate in game info (Mame only)
+3) Threaded ping module to see pings of all people in game lobby
+4) Auto-upload of compressed game logs to server (helps get all logged users for CSMAME/CSMESS debugging)
+5) Tell user if name/email is already in use when trying to register
+6) Allow closing of game information/image tab(s)
+7) Option to automatically record INP's for Mame games with gamename_timestarted.inp for name
+8) Select system in host tree to display system information
+9) Display the number of roms available for each system in the host tab
+10) Show the time when game started in join game list
+11) Multi-thread the audit to do hash's on multiple files at once (GIL limitation atm)
+12) Pop-up dialog showing rom(s) that were skipped in auditing along with reason. (Errors only, not simply no hash match)
+13) Auto populate rom/roms directories from base directory selected in Set Folders dialog
+14) Show joined/left times of users in chat
+15) Audit against roms in 7z format
+16) Display rom count in audit window with file count progress
+17) Allow users to display server stats (players in db, games started, game time played, etc)
+18) Display Mamehub Arrange Top10 (Top 10 games played and Top 10 games played by time)
+19) Display selected game description if in database
+20) Display the times played and time played in the host game treeview for each game
+21) Allow skipping of adult, mechanical and clones
+22) View PDF manuals for games
+23) Show system in join list so people know what version of the game they are joining (snes, genesis, arcade, etc)
+
+Misc/Fixes/Changes:
+1) Split up code into more files for ease of maintenance
+2) Updated Twisted libary from 8.2 to 11.1 for GUI Client and backend server
+3) Updated to Python 2.7.4 for Client
+4) Updated miniupnc to 1.6 for Python 2.7.2 for Client
+5) Updated to more recent ip to country table (Aug 22, 2012)
+6) Country/IP served by server so client doesn't need the ip table anymore and negates lookups on refresh
+7) Cleaned up some orphaned code
+8) Small performance updates
+9) Small updates to reduce flicker on repainting of some controls
+10) Flag controls as dirty on network events instead of checking tables which will improve performance of the GUI
+11) Lowered memory requirements for chat in the html windows
+12) Enlarged the number of systems that Mamehub Arrange can provide information on (1,700+ atm)
+13) Changed Windows version to be a 32meg exe file instead of all the seperate python pyd, dll, etc files
+14) Cleaned up some possible sql injection
+15) Misc grid fixes (stops gui freezeup when *Unknown* displayed and user/joins/quits/hosts)
+16) Context menu on grid now functions (right-click on grids)
+17) Hide selected color information text field in config menu
+18) Can no longer make panels dissapear with double click of splitters
+19) Standard buttons for set folders dialog
+20) Change Buttons to Button(s) in game info
+21) Change Players to Player(s) in game info
+22) In the set folders dialog the paths will no longer display \ in the name.
+23) Video playback now works in Linux (Tested Ubuntu 11.10)
+24) Add lock/release to audit thread to not conflict on list update of hashes
+25) Corrected sort by country or player name for player list
+26) Cleaned up alot of dialog code for memory management
+27) "Normalize" the image paths in the resize image code to handle different paths/os types
+28) No longer pop up dosbox in starting the application (Windows only)
+29) Pre-logon chat no longer is sent to connecting client
+30) Corrected removal of several directories at once in Set Folders dialog
+31) Remove the "Selected File Name:" on top of Host Game tab as the info displays in Game Info tab
+32) Improved unicode support and display in various windows
+
+User Tools/Utilities:
+1) Added utility to convert supported image formats (*.bmp; *.gif; *.jpeg;*.pcx;*.pnm;*.tiff;*.xpm;*.jpg) to PNG format
+2) Added utility to convert 7z to zip since MAME/MESS only supports zip format (in versions before 145)
+3) Added utility to zip files that are in their unpacked state
+4) Added utility to 7z files that are in their unpacked state
+5) Hub!Cade Editor for developing mahcade/wahcade layout files that are compatible with Hub!Cade
+
+Admin Tools/Utilites:
+1) Private administrator chat
+2) MOTD change 
+3) Kick users
+4) Full user id ban
+
+Server:
+1) Ground zero rewrite (92% complete)
+2) Full logging of chat to database (Which ends the "I didn't say that" BS for banning users)
+3) Server logs all connect/disco of user(s) to database
+4) Server keeps totals of the following: connection count, hosted games to database
+5) The IP to nation can be updated on the fly in less than thirty seconds without downtime for client(s)
+
+Work in progress:
+1) Private chat (25%)
+2) Removed Subversion update checks (now done by application/server) for faster program open/update (5%)
+3) Send DIP information to joining clients so all players have matching settings (10%)
+	added network events to client (not finished coding)
+	added loopthru for server network event (I think)
+4) Cron job to restart server if not running which fires off every five minutes. (50%)
+	cron set but no script
+5) Rebuild of the audit system SHA1 to verify rom (95%)
+6) Enlarged the number of roms that Mamehub Arrange will audit and identify (580,000+ atm) (98%)
+7) Admin mute, ban, kick ban (95%)
+	added client network calls
+	added some of the server db calls
+8) Redo challenge via right-click in host game list (50%)
+	added client network event for receive of challenge
+9) Added "Want to Play" event - allow self add to game lobby via weblink I intercept? (50%)
+	added client network event for receive of wants to play
+10) Hub!Cade - cabinet front-end based on Wah!Cade layout/themes (15%)
+	added pygame to client code
+	added basic load code
+	forking the Wah!Cade editor
+11) New HTML windows for better animation support
+
+

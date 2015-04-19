@@ -1,0 +1,77 @@
+Q: What is Hub!Cade?
+
+A: It's simply a gui that interfaces with DigitalGhost's excellent CSMAME and CSMESS applications.  This allows chat and matchmaking for people using CSMAME/CSMESS over internet connections.
+
+------------
+
+Q: Why does Hub!Cade exist instead of submitting changes to MAMEHub?
+
+A: Wanted to take the application in a few other directions.
+
+------------
+
+Q: What roms/systems does Hub!Cade support?
+
+A: In theory, all roms and systems that are supported by MAME 0.144 and MESS 0.144 if they are in the database for auditing.
+
+------------
+
+Q: I've been kicked/muted/banned, what happened?
+
+A: You pissed off an admin. One should play nice in the sandbox.
+
+------------
+
+Q: Why can't I use my RAR, 7z or TAR archives like other emulators?  
+
+A: MAME and MESS require zip archives. Hub!Cade has utilities to change 7z to zip and archive unpacked roms. BTW, 7z support is upcoming for MAME/MESS.
+
+------------
+
+Q: Why are you using Python 2.7.x instead of Python 3.x.x?
+
+A: A few reasons: First, Twisted and PIL don't support Python 3.x.x yet.  Second, "enterprise" Linux's still really only support Python 2.7.x due to many lib's not doing 3.x support yet.
+
+------------
+
+Q: Why not use Psycho or Pypy for performance boost?  
+
+A: Psycho doesn't support 2.7.2 and Pypy does not support ssl in the Twisted library.
+
+------------
+
+Q: Why does it take forever to do a rom scan?
+
+A1: You have alot of roms?  :)
+
+A2: Every zip/7z file must be unpacked and each file in the archive has it's crc32 and sha1 value calculated.  The crc32 and sha1 are calculated for all other files as well in the directories that are selected.
+
+------------
+
+Q: Why can't Hub!Cade simply look at the file names and not do a crc32/sha1 hash audit check?  It's a waste of time as other emulators don't make you do it.
+
+A: Generally other emulators don't have multiplayer over the internet. Because of this, we need to verify that all the players who join a particular hosted game have the exact same rom image otherwise they could be playing different game versions which could cause issues with gameplay.
+
+------------
+
+Q: Why does the flag icon show question marks for a bit now and then?
+
+A: While loading new ip2nation data into the server's db can cause the ip to not be found until all data is loaded.
+
+------------
+
+Q: The country and flag icon is for the wrong country of some users(s), why is this?
+
+A: Unfortunately, due to the nature of the internet, ip blocks can and do move around to different ISPs.  The ip to nation database will get updated as soon as updates are posted going forward but unfortunately there will still be issues now and then.
+
+------------
+
+Q: Why do you only support major releases instead of update releases as it adds rom xxxx or fixes bug(s) with xxxx?
+
+A: It would be nice to use the update release.  However, logistics make it a bit difficult.  It would force all users to update their romsets much more often and quite simply it would be alot more work for the basically one man show for csmame/csmess.  Along with db updates that would need to be pushed out after every update release.
+
+------------
+
+Q: Why do I need a port fowarded to host a game?
+
+A: Because any others who join your game actually connect to the hosting pc directly.
