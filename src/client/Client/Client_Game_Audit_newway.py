@@ -260,7 +260,7 @@ class ROMFileParser(object):
         db_full_hash_dict = []
         temp_dict = {}
         old_gir_gi_id = None
-        conn_player = connect('db/mamehub_gui.db')
+        conn_player = connect('db/hubcade_gui.db')
         curs_player = conn_player.cursor()
         conn_game = connect('db/game_database.db')
         curs_game = conn_game.cursor()
@@ -407,10 +407,10 @@ class GameAuditer(threading.Thread):
         conn_game = connect('db/game_database.db')
         curs_game = conn_game.cursor()
         conn_game.text_factory = lambda x: unicode(x, "utf-8", "ignore")
-        curs_game.execute("attach database 'db/mamehub_gui.db' as gui_db")
+        curs_game.execute("attach database 'db/hubcade_gui.db' as gui_db")
         curs_game.execute("select gs_system_long_name,gi_short_name,gi_long_name,gi_id,(select gm_rotate from game_monitor where gm_id = gi_monitor_id),gi_players,gc_category from game_info,gui_db.game_audit,game_systems,game_category where gi_id = gui_db.game_audit.ga_game_id and gs_id = gi_system_id and gi_gc_category = gc_id union all select 'Arcade',gi_short_name,gi_long_name,gi_id,(select gm_rotate from game_monitor where gm_id = gi_monitor_id),gi_players,gc_category from game_info,gui_db.game_audit,game_category where gi_system_id = 0 and gi_id = gui_db.game_audit.ga_game_id and gi_gc_category = gc_id")
         # for the times/time played
-        conn_game_info = connect('db/mamehub_gui.db')
+        conn_game_info = connect('db/hubcade_gui.db')
         curs_game_info = conn_game_info.cursor()
         conn_game_info.text_factory = lambda x: unicode(x, "utf-8", "ignore")
         # begin parse of data

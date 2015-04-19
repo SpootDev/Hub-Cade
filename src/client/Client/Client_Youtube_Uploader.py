@@ -50,9 +50,9 @@ class YoutubeUploader( YoutubeUploaderTemplate, threading.Thread ):
     def run(self):
         try:
             if self.addKeywordsCheckbox.IsChecked():
-                self.keywordsText.AppendText(" mamehub, mame, online")
+                self.keywordsText.AppendText(" hubcade, mame, online")
             if self.addTitleCheckbox.IsChecked():
-                self.titleText.AppendText(" - MAMEHub")
+                self.titleText.AppendText(" - Hub!Cade")
             print 'UPLOADING ',self.fileTextMap[self.videoChoice.GetStringSelection().encode('ascii','ignore')]
             parameters = [
                 "--email="+self.emailText.GetValue().encode('ascii','ignore'),

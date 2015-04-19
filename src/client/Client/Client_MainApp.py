@@ -19,10 +19,10 @@ from Client_Network import *
 
 class MainApp(wx.App):
     def OnInit(self):
-        self.name = "MAMEHub-Arrange-%s" % wx.GetUserId()
+        self.name = "HubCade-%s" % wx.GetUserId()
         self.instance = wx.SingleInstanceChecker(self.name)
         if '--multi' not in sys.argv and self.instance.IsAnotherRunning():
-            mdial = wx.MessageDialog(None, 'Another instance of MAMEHub Arrange is already running (maybe in the system tray?). If you want to run multiple copies of MAMEHub Arrange on the same machine, add the --multi flag to MAMEHub.bat or MAMEHub.sh files.','Already running MAMEHub Arrange', wx.OK | wx.ICON_ERROR)
+            mdial = wx.MessageDialog(None, 'Another instance of Hub!Cade is already running (maybe in the system tray?). If you want to run multiple copies of Hub!CAde on the same machine.','Already running Hub!Cade', wx.OK | wx.ICON_ERROR)
             mdial.ShowModal()
             mdial.Destroy()
             self.quit = True
@@ -82,11 +82,11 @@ class MainApp(wx.App):
         self.entryDialog = ProgramEntryDialog(self.mainFrame)
 
         # set title
-        self.mainFrame.SetTitle(u"MAMEHub Arrange " + Client_GlobalData.software_rev)
+        self.mainFrame.SetTitle(u"Hub!Cade " + Client_GlobalData.software_rev)
 
         #self.mainFrame.playerGridNew.SetRowLabelSize(0)
         # setup form from config file
-        self.cfg = wx.Config('mamehub_gui_config')
+        self.cfg = wx.Config('hubcade_gui_config')
         # read config settings for program
         # font config
         if self.cfg.Exists('chat_font'):
@@ -516,7 +516,7 @@ class MainApp(wx.App):
         else:
             self.mainFrame.sash_middle.SetSashPosition(Client_GlobalData_Config.center_splitter_location,True)
         self.mainFrame.monitor_type_combo.SetSelection(0)
-        self.mainFrame.main_frame_status_bar.SetStatusText("Welcome to Mamehub Arrange " + Client_GlobalData.software_rev + " for version " + Client_GlobalData.software_rom_rev + " roms", 0)
+        self.mainFrame.main_frame_status_bar.SetStatusText("Welcome to Hub!Cade " + Client_GlobalData.software_rev + " for version " + Client_GlobalData.software_rom_rev + " roms", 0)
 
         start_option = 0
         if self.cfg.Exists('start_screen_option'):
@@ -550,7 +550,7 @@ class MainApp(wx.App):
     def OnExit(self):
         print "here i am exiting and saving settings"
         # write out window config options
-        self.cfg = wx.Config('mamehub_gui_config')
+        self.cfg = wx.Config('hubcade_gui_config')
         self.cfg.WriteInt("width", self.mainFrame.Size[0])
         self.cfg.WriteInt("height", self.mainFrame.Size[1])
         self.cfg.WriteInt("left_splitter_location", self.mainFrame.sash_left.GetSashPosition())
@@ -585,20 +585,20 @@ class MainApp(wx.App):
             if time.time() > Client_GlobalData.networkProtocol.lastPingTime+5*60:
                 Client_GlobalData.networkProtocol.pingServer()
             if time.time() > Client_GlobalData.networkProtocol.lastPongTime+20*60:
-                mdial = wx.MessageDialog(None, 'No response from server. Please try to reconnect or check the blog ( blog.mamehub.info ) for details.', 'No response from server.', wx.OK | wx.ICON_ERROR)
+                mdial = wx.MessageDialog(None, 'No response from server.', 'No response from server.', wx.OK | wx.ICON_ERROR)
                 mdial.ShowModal()
                 mdial.Destroy()
                 self.mainFrame.closeFrame()
         if self.clientFactory.failed \
         or self.clientFactory.protocol.connStatus==ClientProtocol.NOTSTARTED:
-            mdial = wx.MessageDialog(None, 'Could not establish connection with MAMEHub Arrange server. Ensure that the port entered is manually forwarded on your router and opened up on any firewalls. Please check the blog ( blog.mamehub.info ) for details.', 'Could not establish 2-way connection with server.', wx.OK | wx.ICON_ERROR)
+            mdial = wx.MessageDialog(None, 'Could not establish connection with Hub!Cade server. Ensure that the port entered is manually forwarded on your router and opened up on any firewalls.', 'Could not establish 2-way connection with server.', wx.OK | wx.ICON_ERROR)
             mdial.ShowModal()
             mdial.Destroy()
             self.mainFrame.closeFrame()
         elif self.clientFactory.protocol.connStatus==ClientProtocol.CLOSED:
             if Client_GlobalData_Config.chat_export_on_disco == True:
                 self.onExportChatMenuItem(event)
-            mdial = wx.MessageDialog(None, 'Disconnected from MAMEHub Arrange server. Please try to reconnect.', 'Disconnected from MAMEHub Arrange server.', wx.OK | wx.ICON_INFORMATION)
+            mdial = wx.MessageDialog(None, 'Disconnected from Hub!Cade server. Please try to reconnect.', 'Disconnected from Hub!Cade server.', wx.OK | wx.ICON_INFORMATION)
             mdial.ShowModal()
             mdial.Destroy()
             self.mainFrame.closeFrame()

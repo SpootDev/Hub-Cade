@@ -10,7 +10,7 @@ from Client_Template_Config import *
 
 class ConfigDialog ( ConfigTemplate ):
     def onConfigDiagInit( self, event ):
-        self.cfg = wx.Config('mamehub_gui_config')
+        self.cfg = wx.Config('hubcade_gui_config')
         # font
         if self.cfg.Exists('chat_font'):
             Client_GlobalData_Config.chat_font = self.cfg.Read('chat_font')

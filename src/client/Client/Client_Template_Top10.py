@@ -18,7 +18,7 @@ import wx.grid
 class TopTenTemplate ( wx.Dialog ):
 
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"MameHub Arrange Top 10", pos = wx.DefaultPosition, size = wx.Size( 755,453 ), style = wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Hub!Cade Top 10", pos = wx.DefaultPosition, size = wx.Size( 755,453 ), style = wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER )
 
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 

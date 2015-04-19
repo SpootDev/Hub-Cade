@@ -322,9 +322,9 @@ def launchGameByID(hostGameId,isServer,ipAddress,selfport,port):
 class MainFrame(MainFrameTemplate):
     def __init__( self, parent ):
         MainFrameTemplate.__init__(self,parent)
-        self.icon = wx.Icon('../images/MAMEHub.ico', wx.BITMAP_TYPE_ICO, 16, 16)
+        self.icon = wx.Icon('../images/HubCade.ico', wx.BITMAP_TYPE_ICO, 16, 16)
         self.SetIcon(self.icon)
-        self.tbicon = MAMEHubTaskBarIcon(None)
+        self.tbicon = HubCadeTaskBarIcon(None)
         self.tbicon.SetIcon(self.icon)
         TIMER_ID = wx.NewId()
         self.timer = wx.Timer(self,TIMER_ID)
@@ -377,12 +377,12 @@ class MainFrame(MainFrameTemplate):
             return #Mac/Linux doesn't support iconization
 ##        if 'iconizedBefore' not in Client_GlobalData.settings:
 ##            Client_GlobalData.settings['iconizedBefore'] = True
-##            wx.MessageBox("MAMEHub Arrange is now minimized to the system tray. To reopen MAMEHub, click the arcade machine icon in the system tray", "")
+##            wx.MessageBox("Hub!Cade is now minimized to the system tray. To reopen hubcade, click the arcade machine icon in the system tray", "")
         print 'ICONIZING'
         self.Hide()
         #self.Show(False)
         #self.tbicon.SetIcon(self.icon)
-        self.tbicon.ShowBalloonTip("Return to MAMEHub Arrange","Click this icon to bring MAMEHub back")
+        self.tbicon.ShowBalloonTip("Return to Hub!Cade","Click this icon to bring Hub!Cade back")
 
     def statusclockupdate (self,event):
         t = time.localtime(time.time())
@@ -673,10 +673,10 @@ class MainFrame(MainFrameTemplate):
     def ToggleDebug( self, event ):
         if Client_GlobalData.DEBUG_APP == True:
             Client_GlobalData.DEBUG_APP = False
-            self.SetTitle(u"MAMEHub Arrange")
+            self.SetTitle(u"Hub!Cade")
         else:
             Client_GlobalData.DEBUG_APP = True
-            self.SetTitle(u"MAMEHub Arrange - DEBUG_APP Mode")
+            self.SetTitle(u"Hub!Cade - DEBUG_APP Mode")
 
     def setDirectories( self, event ):
         dialog = SetDirectoriesDialog(self)
@@ -844,9 +844,9 @@ class MainFrame(MainFrameTemplate):
                         if os.path.exists(image_location):
                             img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     else:
-                       img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                       img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                 NewWidth, NewHeight = ResizeImageCalc(img,self.title_snap_title_bitmap.Size[0],self.title_snap_title_bitmap.Size[1])
                 img = img.Scale(NewWidth,NewHeight)
                 self.title_snap_title_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -869,9 +869,9 @@ class MainFrame(MainFrameTemplate):
                         if os.path.exists(image_location):
                             img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     else:
-                       img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                       img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                 NewWidth, NewHeight = ResizeImageCalc(img,self.title_snap_title_bitmap.Size[0],self.title_snap_title_bitmap.Size[1])
                 img = img.Scale(NewWidth,NewHeight)
                 self.title_snap_snap_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -900,9 +900,9 @@ class MainFrame(MainFrameTemplate):
                         if os.path.exists(image_location):
                             img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     else:
-                       img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                       img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                 NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                 img = img.Scale(NewWidth,NewHeight)
                 self.title_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -931,9 +931,9 @@ class MainFrame(MainFrameTemplate):
                         if os.path.exists(image_location):
                             img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     else:
-                       img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                       img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                 NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                 img = img.Scale(NewWidth,NewHeight)
                 self.snap_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1020,9 +1020,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                                img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                                img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                            img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                            img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.cart_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1048,9 +1048,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                                img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                                img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                            img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                            img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.box_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1076,9 +1076,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                                img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                                img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                            img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                            img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.label_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1104,9 +1104,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                                img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                                img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                            img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                            img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.cart_top_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1150,9 +1150,9 @@ class MainFrame(MainFrameTemplate):
                     else:
                         # wipe out "old" manual
                         if wx.Platform == '__WXMSW__':
-                            self.pdf_panel.LoadUrl( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/mamehub.pdf" )
+                            self.pdf_panel.LoadUrl( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/hubcade.pdf" )
                         else:
-                            self.pdf_panel.LoadDocument( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/mamehub.pdf" )
+                            self.pdf_panel.LoadDocument( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/hubcade.pdf" )
             else:
                 # if mess rom
                 #do box image
@@ -1175,9 +1175,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                               img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                               img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.box_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1203,9 +1203,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                               img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                               img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.cart_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1231,9 +1231,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                               img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                               img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                           img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                           img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.label_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1259,9 +1259,9 @@ class MainFrame(MainFrameTemplate):
                             if os.path.exists(image_location):
                                 img = wx.Image( image_location, wx.BITMAP_TYPE_ANY)
                             else:
-                                img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                                img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                         else:
-                            img = wx.Image( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY)
+                            img = wx.Image( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY)
                     NewWidth, NewHeight = ResizeImageCalc(img,self.title_bitmap.Size[0],self.title_bitmap.Size[1])
                     img = img.Scale(NewWidth,NewHeight)
                     self.cart_top_bitmap.SetBitmap(wx.BitmapFromImage(img))
@@ -1288,9 +1288,9 @@ class MainFrame(MainFrameTemplate):
                     else:
                         # wipe out "old" manual
                         if wx.Platform == '__WXMSW__':
-                            self.pdf_panel.LoadUrl( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/mamehub.pdf" )
+                            self.pdf_panel.LoadUrl( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/hubcade.pdf" )
                         else:
-                            self.pdf_panel.LoadDocument( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/mamehub.pdf" )
+                            self.pdf_panel.LoadDocument( Client_GlobalData.application_launch_directory.rsplit('/',1)[0] + "/images/hubcade.pdf" )
                 # info display
                 if Client_GlobalData_Config.mess_info_display_tab == True:
                     html_page = "<html><font size=\"" + str(Client_GlobalData_Config.gameinfo_font_size) + "\" color=\"rgb" + Client_GlobalData_Config.gameinfo_font_color + "\" face=\"" + Client_GlobalData_Config.gameinfo_font + "\"><span style=\"font-size:"+str(Client_GlobalData_Config.gameinfo_font_size)+"pt;\"><B>Rom Name: </B> " + rom_name + "<BR>"
@@ -1456,23 +1456,23 @@ class MainFrame(MainFrameTemplate):
     def onAboutMenuItem( self, event ):
         info = wx.AboutDialogInfo()
         #info.SetIcon(wx.Icon('icons/hunter.png', wx.BITMAP_TYPE_PNG))
-        info.SetName('MAMEHub Arrange')
+        info.SetName('Hub!Cade')
         info.SetVersion(Client_GlobalData.software_rev)
-        info.SetDescription("MAMEhub Arrange is a frontend that helps users to arrange and play games on CSMAME and CSMESS.\nThis allows users to play older generation arcade, home console and computer games over the internet.")
+        info.SetDescription("Hub!Cade is a frontend that helps users to arrange and play games on CSMAME and CSMESS.\nThis allows users to play older generation arcade, home console and computer games over the internet.")
         info.SetCopyright('(C) 2010-2012 Jason Gauci ')
-        info.SetWebSite('http://www.mamehub.info')
+        info.SetCopyright('(C) 2015 Quinn Granfor ')
+        #info.SetWebSite('http://xxxxx')
         #info.SetLicence("license")
         info.AddDeveloper('DigitalGhost')
-        info.AddDeveloper('Spoot')
+        info.AddDeveloper('SpootDev')
         info.AddDeveloper('Krusty')
-        info.AddDocWriter('DigitalGhost')
         info.AddDocWriter('Krusty')
         #info.AddArtist('The Tango crew')
         #info.AddTranslator('Spoot')
         wx.AboutBox(info)
 
-    def OnMainMamehubSite( self, event ):
-        webbrowser.open("https://sites.google.com/site/mamehubarrange/",1,True)
+    def OnMainHubCadeSite( self, event ):
+        webbrowser.open("https://sites.google.com/site/hubcade/Home/",1,True)
 
     def onConfigurationMenuItem( self, event ):
         dialog = ConfigDialog(self)
@@ -1487,9 +1487,9 @@ class MainFrame(MainFrameTemplate):
     def onHubCadeEditorMenuItem( self, event ):
         if str.upper(sys.platform[0:3])=='WIN' \
         or str.upper(sys.platform[0:3])=='CYG':
-            subprocess.call(['./MameHub_HubCade_Editor.exe'])
+            subprocess.call(['./HubCade_Editor.exe'])
         else:
-            subprocess.call(['./MameHub_HubCade_Editor'])
+            subprocess.call(['./HubCade_Editor'])
         event.Skip()
 
     def OnChatArchiveViewMenuItem( self, event ):
@@ -1583,16 +1583,16 @@ class MainFrame(MainFrameTemplate):
         #self.st_pos.SetLabel('position: %d' % offset)
 
     def openBlogPage( self, event ):
-        webbrowser.open("http://blog.mamehub.info/",1,True)
+        webbrowser.open("http://xxxxxx/",1,True)
 
     def openForumPage( self, event ):
-        webbrowser.open("http://forum.mamehub.info",1,True)
+        webbrowser.open("http://xxxxxx",1,True)
 
     def openHelpPage( self, event ):
-        webbrowser.open("http://forum.mamehub.info/viewforum.php?f=5",1,True)
+        webbrowser.open("http://xxxxxx",1,True)
 
     def OnBugReportMenuItem( self, event ):
-        webbrowser.open("http://www.spootsworld.com/mamehub_bug/index.php",1,True)
+        webbrowser.open("http://xxxxxx",1,True)
 
     def OnImageChatResize( self, event ):
         wx.CallAfter(Client_GlobalData.app.mainFrame.OnChatResize, event )
@@ -1839,13 +1839,13 @@ class MainFrame(MainFrameTemplate):
     def OnaddToFriendsMenuItem( self, event ):
         selectedUsername = self.playerGridNew.GetCellValue(Client_GlobalData.grid_cell_row, 2)
         sql_statement = u"insert into player_info (id,player_name,player_friend) values (NULL,\"" + selectedUsername + u"\",1)"
-        Client_Database.SQL_MameHub_Arrange_GUI(sql_statement)
+        Client_Database.SQL_HubCade_Arrange_GUI(sql_statement)
         event.Skip()
 
     def OnremoveFromFriendsMenuItem( self, event ):
         selectedUsername = self.playerGridNew.GetCellValue(Client_GlobalData.grid_cell_row, 2)
         sql_statement = u"delete from player_info where player_name = \"" + selectedUsername + u"\" and player_friend = 1"
-        Client_Database.SQL_MameHub_Arrange_GUI(sql_statement)
+        Client_Database.SQL_HubCade_Arrange_GUI(sql_statement)
         event.Skip()
 
     def onPlayerGridAdmin_KickUserMenuItem( self, event ):
@@ -1871,13 +1871,13 @@ class MainFrame(MainFrameTemplate):
     def OnChatBlockMenuItem( self, event ):
         selectedUsername = self.playerGridNew.GetCellValue(Client_GlobalData.grid_cell_row, 2)
         sql_statement = u"insert into player_info (id,player_name,player_block_chat) values (NULL,\"" + selectedUsername + u"\",1)"
-        Client_Database.SQL_MameHub_Arrange_GUI(sql_statement)
+        Client_Database.SQL_HubCade_Arrange_GUI(sql_statement)
         event.Skip()
 
     def OnremovechatblockMenuItem( self, event ):
         selectedUsername = self.playerGridNew.GetCellValue(Client_GlobalData.grid_cell_row, 2)
         sql_statement = u"delete from player_info where player_name = \"" + selectedUsername + u"\" and player_block_chat = 1"
-        Client_Database.SQL_MameHub_Arrange_GUI(sql_statement)
+        Client_Database.SQL_HubCade_Arrange_GUI(sql_statement)
         event.Skip()
 
     def filterGameTree( self, event ):
@@ -1903,7 +1903,7 @@ class MainFrame(MainFrameTemplate):
         event.Skip()
 
     def onExportChatMenuItem( self, event ):
-        fileName = u"MAMEHub_Arrange_Chat_Log_" + time.strftime("%Y%m%d_%H%M%S").encode("utf8") + ".html"
+        fileName = u"HubCade_Chat_Log_" + time.strftime("%Y%m%d_%H%M%S").encode("utf8") + ".html"
         outHandle = open ( fileName, 'w')
         outHandle.write("<html>" + Client_GlobalData.chatHTML.encode("utf8") + "</html>")
         outHandle.close()
@@ -1991,7 +1991,7 @@ class MainFrame(MainFrameTemplate):
         removed_page = event.GetSelection() - 1  # do the -1 so it will match the list below as info page is 0 and can't be removed
         print "removed: ",removed_page
         #print "count: ",len(Client_GlobalData_Config.auinotebook_mame_list)
-        self.cfg = wx.Config('mamehub_gui_config')
+        self.cfg = wx.Config('hubcade_gui_config')
         if Client_GlobalData_Config.mame_mess == True:
             item_type = Client_GlobalData_Config.auinotebook_mame_list[removed_page]
             Client_GlobalData_Config.auinotebook_mame_list.pop(removed_page)

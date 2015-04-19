@@ -17,7 +17,7 @@ import wx.xrc
 class ProgramEntryTemplate ( wx.Dialog ):
 
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Welcome to MAMEHub Arrange", pos = wx.DefaultPosition, size = wx.Size( 512,447 ), style = wx.DEFAULT_DIALOG_STYLE|wx.STAY_ON_TOP )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Welcome to Hub!Cade", pos = wx.DefaultPosition, size = wx.Size( 512,447 ), style = wx.DEFAULT_DIALOG_STYLE|wx.STAY_ON_TOP )
 
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )

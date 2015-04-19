@@ -58,7 +58,7 @@ def cade_main():
     file_handle.close
     # set main window size
     screen = pygame.display.set_mode((int(layout_file_lines[0]),int(layout_file_lines[1])), 0, 24)
-    pygame.display.set_caption('MameHub Arrange Hub!Cade')
+    pygame.display.set_caption('Hub!Cade')
     if Client_GlobalData.DEBUG_APP == True:
         # create GUI object
         gui = Renderer()

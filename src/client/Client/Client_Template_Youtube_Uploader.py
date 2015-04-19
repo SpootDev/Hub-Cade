@@ -34,7 +34,7 @@ class YoutubeUploaderTemplate ( wx.Dialog ):
 
 		bSizer20.Add( sbSizer31, 1, 0, 5 )
 
-		sbSizer32 = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, u"Youtube Password (NOT YOUR MAMEHUB PASSWORD)" ), wx.VERTICAL )
+		sbSizer32 = wx.StaticBoxSizer( wx.StaticBox( self, wx.ID_ANY, u"Youtube Password (NOT YOUR Hub!Cade PASSWORD)" ), wx.VERTICAL )
 
 		self.passwordText = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, wx.TE_PASSWORD )
 		sbSizer32.Add( self.passwordText, 0, wx.ALL|wx.EXPAND, 5 )
@@ -63,7 +63,7 @@ class YoutubeUploaderTemplate ( wx.Dialog ):
 		self.titleText = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer35.Add( self.titleText, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.addTitleCheckbox = wx.CheckBox( self, wx.ID_ANY, u"Add \"- MAMEHub\" to title", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.addTitleCheckbox = wx.CheckBox( self, wx.ID_ANY, u"Add \"- Hub!Cade\" to title", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.addTitleCheckbox.SetValue(True)
 		sbSizer35.Add( self.addTitleCheckbox, 0, wx.ALL, 5 )
 
@@ -74,7 +74,7 @@ class YoutubeUploaderTemplate ( wx.Dialog ):
 		self.keywordsText = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer351.Add( self.keywordsText, 1, wx.ALL|wx.EXPAND, 5 )
 
-		self.addKeywordsCheckbox = wx.CheckBox( self, wx.ID_ANY, u"Add MAMEHub Keywords", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.addKeywordsCheckbox = wx.CheckBox( self, wx.ID_ANY, u"Add Hub!Cade Keywords", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.addKeywordsCheckbox.SetValue(True)
 		sbSizer351.Add( self.addKeywordsCheckbox, 0, wx.ALL, 5 )
 
