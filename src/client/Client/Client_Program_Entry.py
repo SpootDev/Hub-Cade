@@ -118,10 +118,10 @@ class ProgramEntryDialog ( ProgramEntryTemplate ):
         if self.connecting: return
         self.connecting = True
         #Client_GlobalData.serverName = self.serverName.GetLineText(0).encode('utf8')
-        if platform.node() != "spoot8-PC" and platform.node() != "spootdev-virtual-machine" and platform.node() != "mamehub-virtual-machine":
+        if platform.node() != "spoot8-PC" and platform.node() != "spootdev-virtual-machine":
             Client_GlobalData.serverName = u'www.spootsworld.com'
         else:
-            Client_GlobalData.serverName = u'10.0.0.147'
+            Client_GlobalData.serverName = u'10.0.0.97'
         Client_GlobalData.selfPort = self.portNumberSpinner.GetValue()
 
         if Client_GlobalData_Config.use_miniupnpc == True and Client_GlobalData.u is not None:
@@ -145,14 +145,14 @@ class ProgramEntryDialog ( ProgramEntryTemplate ):
                 print 'trying to redirect %s port %u TCP => %s port %u TCP' % (externalipaddress, port, Client_GlobalData.u.lanaddr, port)
 
                 b = Client_GlobalData.u.addportmapping(port, 'TCP', u.lanaddr, port,
-                                    'MAMEHub', '')
+                                    'HubCade', '')
                 if b:
                     print 'Success.'
                 else:
                     print 'Failed, hopefully the port is manually mapped.'
 
                 b = Client_GlobalData.u.addportmapping(port, 'UDP', Client_GlobalData.u.lanaddr, port,
-                                    'MAMEHub', '')
+                                    'HubCade', '')
                 if b:
                     print 'Success.'
                 else:
@@ -190,6 +190,6 @@ class ProgramEntryDialog ( ProgramEntryTemplate ):
             self.Close(True)
         else:
             Client_GlobalData.Connected_Status = False
-            mdial = wx.MessageDialog(None, 'The MAMEHub Arrange server is not accepting connections at this time.', 'Cannot connect to server', wx.OK | wx.ICON_ERROR)
+            mdial = wx.MessageDialog(None, 'The Hub!Cade server is not accepting connections at this time.', 'Cannot connect to server', wx.OK | wx.ICON_ERROR)
             mdial.ShowModal()
             mdial.Destroy()

@@ -297,7 +297,7 @@ class ConfigTemplate ( wx.Dialog ):
 		image_save_option_choiceChoices = [ u"Central Method", u"System Method" ]
 		self.image_save_option_choice = wx.Choice( self.m_panel14, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, image_save_option_choiceChoices, 0 )
 		self.image_save_option_choice.SetSelection( 0 )
-		self.image_save_option_choice.SetToolTipString( u"Central Method = All located in MAMEHub Images\nSystem Method = Parent directory of system/roms" )
+		self.image_save_option_choice.SetToolTipString( u"Central Method = All located in Hub!Cade Images\nSystem Method = Parent directory of system/roms" )
 
 		gSizer3.Add( self.image_save_option_choice, 0, wx.ALL, 5 )
 

@@ -6,20 +6,15 @@ import Client_GlobalData
 
 # setup/open all the database files
 def OpenDatabase():
-##    Client_GlobalData.conn = connect('db/mame_xml.db')
-##    Client_GlobalData.curs = Client_GlobalData.conn.cursor()
     #Client_GlobalData.conn.text_factory = lambda x: unicode(x, "utf-8", "ignore")
-    Client_GlobalData.conn_player = connect('db/mamehub_gui.db')
+    Client_GlobalData.conn_player = connect('db/hubcade_gui.db')
     Client_GlobalData.curs_player = Client_GlobalData.conn_player.cursor()
-    Client_GlobalData.conn_chat = connect('db/mamehub_chat.db')
+    Client_GlobalData.conn_chat = connect('db/hubcade_chat.db')
     Client_GlobalData.curs_chat = Client_GlobalData.conn_chat.cursor()
-##    Client_GlobalData.conn_mess = connect('db/mess_xml.db')
-##    Client_GlobalData.curs_mess = Client_GlobalData.conn_mess.cursor()
-##    Client_GlobalData.conn_mess.text_factory = lambda x: unicode(x, "utf-8", "ignore")
     Client_GlobalData.conn_game = connect('db/game_database.db')
     Client_GlobalData.curs_game = Client_GlobalData.conn_game.cursor()
     Client_GlobalData.conn_game.text_factory = lambda x: unicode(x, "utf-8", "ignore")
-    Client_GlobalData.curs_game.execute("attach database 'db/mamehub_gui.db' as gui_db")
+    Client_GlobalData.curs_game.execute("attach database 'db/hubcade_gui.db' as gui_db")
 
 # close all the database files
 def CloseDatabase():
@@ -38,17 +33,17 @@ def CloseDatabase():
 def CheckDBVersions():
     pass
 
-# perform sql on mamehub_gui.db
-def SQL_MameHub_Arrange_GUI(sql_statement):
+# perform sql on hubcade_gui.db
+def SQL_HubCade_Arrange_GUI(sql_statement):
     Client_GlobalData.curs_player.execute(sql_statement)
     Client_GlobalData.conn_player.commit()
 
-def SQL_MameHub_Arrange_GUI_Args(sql_statement,sql_args):
+def SQL_HubCade_Arrange_GUI_Args(sql_statement,sql_args):
     Client_GlobalData.curs_player.execute(sql_statement,sql_args)
     Client_GlobalData.conn_player.commit()
 
-# perfrom sql on mamehub_chat.db
-def SQL_MameHub_Arrange_Chat(sql_statement,sql_args):
+# perfrom sql on hubcade_chat.db
+def SQL_HubCade_Arrange_Chat(sql_statement,sql_args):
     Client_GlobalData.curs_chat.execute(sql_statement,sql_args)
     Client_GlobalData.conn_chat.commit()
 

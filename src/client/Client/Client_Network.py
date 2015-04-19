@@ -603,8 +603,6 @@ class ClientProtocol(Int32StringReceiver):
             mdial = wx.MessageDialog(None, 'Your password is incorrect, please try again.', 'Wrong password', wx.OK | wx.ICON_ERROR)
             mdial.ShowModal()
             mdial.Destroy()
-##        elif messageWords[0]=="CLIENT_INVALID":
-##            wx.MessageBox("A new version of MAMEHub has been released!  You must uninstall this version and install the new version.  **NOTE** When you uninstall mamehub, it will COMPLETELY DELETE ALL FILES IN THE MAMEHUB FOLDER!!!!!!!!  If you have any roms/cfgs/videos/screenshots/etc. in your mamehub folder, move it somewhere safe BEFORE YOU UNINSTALL!!!!!  Visit http://10ghost.net/MAMEHubDownloads/ to get the new version of MAMEHub","Old client")
         elif messageWords[0]=="PRIV_CHAT":
             # see if chat block
             user_name = chatString.split(">",1)[0].replace("<","")
@@ -620,7 +618,7 @@ class ClientProtocol(Int32StringReceiver):
                     sql_chat_string = chatString.decode("utf8").replace("\"","'")
                     sql_chat_string = sql_chat_string.split(">")[1].lstrip()
                     sql_args = sql_chat_string,time.strftime("%Y-%m-%d %H:%M:%S"),user_name.split(" ")[1]
-                    Client_Database.SQL_MameHub_Arrange_Chat(u"insert into chat_log (id,chat_text,chat_time,chat_user) values (NULL,?,?,?)",sql_args)
+                    Client_Database.SQL_HubCade_Arrange_Chat(u"insert into chat_log (id,chat_text,chat_time,chat_user) values (NULL,?,?,?)",sql_args)
                 chatString = ProcessChatString(chatString)
 ##                scrollPosition = Client_GlobalData.app.mainFrame.privateLogHTML.GetViewStart()[1]*Client_GlobalData.app.mainFrame.privateLogHTML.GetScrollPixelsPerUnit()[1]
 ##                scrollBottomPosition = (Client_GlobalData.app.mainFrame.privateLogHTML.GetViewStart()[1]*Client_GlobalData.app.mainFrame.privateLogHTML.GetScrollPixelsPerUnit()[1])+Client_GlobalData.app.mainFrame.privateLogHTML.GetClientSize()[1]
@@ -652,7 +650,7 @@ class ClientProtocol(Int32StringReceiver):
                 sql_chat_string = chatString.decode("utf8").replace("\"","'")
                 sql_chat_string = sql_chat_string.split(">")[1].lstrip()
                 sql_args = sql_chat_string,time.strftime("%Y-%m-%d %H:%M:%S"),user_name.split(" ")[1]
-                Client_Database.SQL_MameHub_Arrange_Chat(u"insert into chat_log (id,chat_text,chat_time,chat_user) values (NULL,?,?,?)",sql_args)
+                Client_Database.SQL_HubCade_Arrange_Chat(u"insert into chat_log (id,chat_text,chat_time,chat_user) values (NULL,?,?,?)",sql_args)
             chatString = ProcessChatString(chatString)
 ##            scrollPosition = Client_GlobalData.app.mainFrame.adminLogHTML.GetViewStart()[1]*Client_GlobalData.app.mainFrame.adminLogHTML.GetScrollPixelsPerUnit()[1]
 ##            scrollBottomPosition = (Client_GlobalData.app.mainFrame.adminLogHTML.GetViewStart()[1]*Client_GlobalData.app.mainFrame.adminLogHTML.GetScrollPixelsPerUnit()[1])+Client_GlobalData.app.mainFrame.adminLogHTML.GetClientSize()[1]
@@ -746,7 +744,7 @@ class ClientProtocol(Int32StringReceiver):
                         sql_chat_string = chatString.decode("utf8").replace("\"","'")
                         sql_chat_string = sql_chat_string.split(">")[1].lstrip()
                         sql_args = sql_chat_string,time.strftime("%Y-%m-%d %H:%M:%S"),user_name.split(" ")[1]
-                        Client_Database.SQL_MameHub_Arrange_Chat(u"insert into chat_log (id,chat_text,chat_time,chat_user) values (NULL,?,?,?)",sql_args)
+                        Client_Database.SQL_HubCade_Arrange_Chat(u"insert into chat_log (id,chat_text,chat_time,chat_user) values (NULL,?,?,?)",sql_args)
                 # play chime if option is set and name is typed
                 if Client_GlobalData_Config.chime_on_chat_name == True and chatString[0] != "*":
                     try:

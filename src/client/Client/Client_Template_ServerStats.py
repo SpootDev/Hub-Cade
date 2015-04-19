@@ -18,7 +18,7 @@ import wx.grid
 class ServerStatsTemplate ( wx.Dialog ):
 
 	def __init__( self, parent ):
-		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"MameHub Arrange Server Statistics", pos = wx.DefaultPosition, size = wx.Size( 377,420 ), style = wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER )
+		wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = u"Hub!Cade Server Statistics", pos = wx.DefaultPosition, size = wx.Size( 377,420 ), style = wx.DEFAULT_DIALOG_STYLE|wx.RESIZE_BORDER )
 
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 

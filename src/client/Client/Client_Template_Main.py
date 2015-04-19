@@ -37,7 +37,7 @@ wx.ID_HOST_GAME = 1003
 class MainFrameTemplate ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"MAMEHub Arrange", pos = wx.DefaultPosition, size = wx.Size( 1056,768 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Hub!Cade", pos = wx.DefaultPosition, size = wx.Size( 1056,768 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHintsSz( wx.DefaultSize, wx.DefaultSize )
 		self.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_3DLIGHT ) )
@@ -332,7 +332,7 @@ class MainFrameTemplate ( wx.Frame ):
 
 		sbSizer57 = wx.StaticBoxSizer( wx.StaticBox( self.title_snap_panel, wx.ID_ANY, u"Title" ), wx.VERTICAL )
 
-		self.title_snap_title_bitmap = wx.StaticBitmap( self.title_snap_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.title_snap_title_bitmap = wx.StaticBitmap( self.title_snap_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer57.Add( self.title_snap_title_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -340,7 +340,7 @@ class MainFrameTemplate ( wx.Frame ):
 
 		sbSizer59 = wx.StaticBoxSizer( wx.StaticBox( self.title_snap_panel, wx.ID_ANY, u"Snap" ), wx.VERTICAL )
 
-		self.title_snap_snap_bitmap = wx.StaticBitmap( self.title_snap_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.title_snap_snap_bitmap = wx.StaticBitmap( self.title_snap_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer59.Add( self.title_snap_snap_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -354,7 +354,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.title_panel = wx.Panel( self.game_info_images_auinotebook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		sbSizer291 = wx.StaticBoxSizer( wx.StaticBox( self.title_panel, wx.ID_ANY, wx.EmptyString ), wx.VERTICAL )
 
-		self.title_bitmap = wx.StaticBitmap( self.title_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.title_bitmap = wx.StaticBitmap( self.title_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer291.Add( self.title_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -365,7 +365,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.snap_panel = wx.Panel( self.game_info_images_auinotebook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		sbSizer301 = wx.StaticBoxSizer( wx.StaticBox( self.snap_panel, wx.ID_ANY, wx.EmptyString ), wx.VERTICAL )
 
-		self.snap_bitmap = wx.StaticBitmap( self.snap_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.snap_bitmap = wx.StaticBitmap( self.snap_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer301.Add( self.snap_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -376,7 +376,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.cart_panel = wx.Panel( self.game_info_images_auinotebook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		sbSizer31 = wx.StaticBoxSizer( wx.StaticBox( self.cart_panel, wx.ID_ANY, wx.EmptyString ), wx.VERTICAL )
 
-		self.cart_bitmap = wx.StaticBitmap( self.cart_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.cart_bitmap = wx.StaticBitmap( self.cart_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer31.Add( self.cart_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -387,7 +387,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.box_panel = wx.Panel( self.game_info_images_auinotebook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		sbSizer32 = wx.StaticBoxSizer( wx.StaticBox( self.box_panel, wx.ID_ANY, wx.EmptyString ), wx.VERTICAL )
 
-		self.box_bitmap = wx.StaticBitmap( self.box_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.box_bitmap = wx.StaticBitmap( self.box_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer32.Add( self.box_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -398,7 +398,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.label_panel = wx.Panel( self.game_info_images_auinotebook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		sbSizer56 = wx.StaticBoxSizer( wx.StaticBox( self.label_panel, wx.ID_ANY, wx.EmptyString ), wx.VERTICAL )
 
-		self.label_bitmap = wx.StaticBitmap( self.label_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.label_bitmap = wx.StaticBitmap( self.label_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer56.Add( self.label_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -409,7 +409,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.cart_top_panel = wx.Panel( self.game_info_images_auinotebook, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, wx.TAB_TRAVERSAL )
 		sbSizer58 = wx.StaticBoxSizer( wx.StaticBox( self.cart_top_panel, wx.ID_ANY, wx.EmptyString ), wx.VERTICAL )
 
-		self.cart_top_bitmap = wx.StaticBitmap( self.cart_top_panel, wx.ID_ANY, wx.Bitmap( u"../images/mamehub_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.cart_top_bitmap = wx.StaticBitmap( self.cart_top_panel, wx.ID_ANY, wx.Bitmap( u"../images/hubcade_default.png", wx.BITMAP_TYPE_ANY ), wx.DefaultPosition, wx.DefaultSize, 0 )
 		sbSizer58.Add( self.cart_top_bitmap, 1, wx.ALL|wx.EXPAND, 5 )
 
 
@@ -723,7 +723,7 @@ class MainFrameTemplate ( wx.Frame ):
 
 		self.statsMenu.AppendSeparator()
 
-		self.top10StatsMenuItem = wx.MenuItem( self.statsMenu, wx.ID_ANY, u"MameHub Arrange &Top 10", wx.EmptyString, wx.ITEM_NORMAL )
+		self.top10StatsMenuItem = wx.MenuItem( self.statsMenu, wx.ID_ANY, u"Hub!Cade Arrange &Top 10", wx.EmptyString, wx.ITEM_NORMAL )
 		self.statsMenu.AppendItem( self.top10StatsMenuItem )
 
 		self.m_menubar1.Append( self.statsMenu, u"&Statistics" )
@@ -765,8 +765,8 @@ class MainFrameTemplate ( wx.Frame ):
 
 		self.help.AppendSeparator()
 
-		self.main_mamehub_site_MenuItem = wx.MenuItem( self.help, wx.ID_ANY, u"Mamehub Arrange &Website", wx.EmptyString, wx.ITEM_NORMAL )
-		self.help.AppendItem( self.main_mamehub_site_MenuItem )
+		self.main_hubcade_site_MenuItem = wx.MenuItem( self.help, wx.ID_ANY, u"Hub!Cade Arrange &Website", wx.EmptyString, wx.ITEM_NORMAL )
+		self.help.AppendItem( self.main_hubcade_site_MenuItem )
 
 		self.forumMenuItem = wx.MenuItem( self.help, wx.ID_ANY, u"&Forum", wx.EmptyString, wx.ITEM_NORMAL )
 		self.help.AppendItem( self.forumMenuItem )
@@ -870,7 +870,7 @@ class MainFrameTemplate ( wx.Frame ):
 		self.Bind( wx.EVT_MENU, self.OnAdminMOTDMenuItem, id = self.admin_motd_MenuItem.GetId() )
 		self.Bind( wx.EVT_MENU, self.OnAdminBanInquiryMenuItem, id = self.admin_ban_List_MenuItem.GetId() )
 		self.Bind( wx.EVT_MENU, self.onAboutMenuItem, id = self.aboutMenuItem.GetId() )
-		self.Bind( wx.EVT_MENU, self.OnMainMamehubSite, id = self.main_mamehub_site_MenuItem.GetId() )
+		self.Bind( wx.EVT_MENU, self.OnMainHubCadeSite, id = self.main_hubcade_site_MenuItem.GetId() )
 		self.Bind( wx.EVT_MENU, self.openForumPage, id = self.forumMenuItem.GetId() )
 		self.Bind( wx.EVT_MENU, self.OnBugReportMenuItem, id = self.bug_reportMenuItem.GetId() )
 		self.Bind(wx.media.EVT_MEDIA_LOADED, self.OnMediaLoad)
@@ -1121,7 +1121,7 @@ class MainFrameTemplate ( wx.Frame ):
 	def onAboutMenuItem( self, event ):
 		event.Skip()
 
-	def OnMainMamehubSite( self, event ):
+	def OnMainHubCaseSite( self, event ):
 		event.Skip()
 
 	def openForumPage( self, event ):

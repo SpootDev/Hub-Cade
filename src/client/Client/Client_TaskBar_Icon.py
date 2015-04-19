@@ -3,7 +3,7 @@ from Client_TaskBarIconBase import *
 # import globals
 import Client_GlobalData
 
-class MAMEHubTaskBarIcon(TaskBarIconBase):
+class HubCadeTaskBarIcon(TaskBarIconBase):
     """
     Taskbar Icon Demo
     """

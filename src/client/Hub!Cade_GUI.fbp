@@ -11,11 +11,11 @@
         <property name="embedded_files_path">res</property>
         <property name="encoding">UTF-8</property>
         <property name="event_generation">connect</property>
-        <property name="file">MAMEHub_Template</property>
+        <property name="file">HubCade_Template</property>
         <property name="first_id">1000</property>
         <property name="help_provider">none</property>
         <property name="internationalize">0</property>
-        <property name="name">MAMEHub</property>
+        <property name="name">HubCade</property>
         <property name="namespace"></property>
         <property name="path">../src/</property>
         <property name="precompiled_header"></property>
@@ -44,7 +44,7 @@
             <property name="size">1056,768</property>
             <property name="style">wxDEFAULT_FRAME_STYLE</property>
             <property name="subclass"></property>
-            <property name="title">MAMEHub Arrange</property>
+            <property name="title">HubCade</property>
             <property name="tooltip"></property>
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
@@ -3325,7 +3325,7 @@
                                                                                                     <property name="aui_row"></property>
                                                                                                     <property name="best_size"></property>
                                                                                                     <property name="bg"></property>
-                                                                                                    <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                                    <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                                     <property name="caption"></property>
                                                                                                     <property name="caption_visible">1</property>
                                                                                                     <property name="center_pane">0</property>
@@ -3420,7 +3420,7 @@
                                                                                                     <property name="aui_row"></property>
                                                                                                     <property name="best_size"></property>
                                                                                                     <property name="bg"></property>
-                                                                                                    <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                                    <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                                     <property name="caption"></property>
                                                                                                     <property name="caption_visible">1</property>
                                                                                                     <property name="center_pane">0</property>
@@ -3592,7 +3592,7 @@
                                                                                             <property name="aui_row"></property>
                                                                                             <property name="best_size"></property>
                                                                                             <property name="bg"></property>
-                                                                                            <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                            <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                             <property name="caption"></property>
                                                                                             <property name="caption_visible">1</property>
                                                                                             <property name="center_pane">0</property>
@@ -3762,7 +3762,7 @@
                                                                                             <property name="aui_row"></property>
                                                                                             <property name="best_size"></property>
                                                                                             <property name="bg"></property>
-                                                                                            <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                            <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                             <property name="caption"></property>
                                                                                             <property name="caption_visible">1</property>
                                                                                             <property name="center_pane">0</property>
@@ -3932,7 +3932,7 @@
                                                                                             <property name="aui_row"></property>
                                                                                             <property name="best_size"></property>
                                                                                             <property name="bg"></property>
-                                                                                            <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                            <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                             <property name="caption"></property>
                                                                                             <property name="caption_visible">1</property>
                                                                                             <property name="center_pane">0</property>
@@ -4102,7 +4102,7 @@
                                                                                             <property name="aui_row"></property>
                                                                                             <property name="best_size"></property>
                                                                                             <property name="bg"></property>
-                                                                                            <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                            <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                             <property name="caption"></property>
                                                                                             <property name="caption_visible">1</property>
                                                                                             <property name="center_pane">0</property>
@@ -4272,7 +4272,7 @@
                                                                                             <property name="aui_row"></property>
                                                                                             <property name="best_size"></property>
                                                                                             <property name="bg"></property>
-                                                                                            <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                            <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                             <property name="caption"></property>
                                                                                             <property name="caption_visible">1</property>
                                                                                             <property name="center_pane">0</property>
@@ -4442,7 +4442,7 @@
                                                                                             <property name="aui_row"></property>
                                                                                             <property name="best_size"></property>
                                                                                             <property name="bg"></property>
-                                                                                            <property name="bitmap">Load From File; images/mamehub_default.png</property>
+                                                                                            <property name="bitmap">Load From File; images/HubCade_default.png</property>
                                                                                             <property name="caption"></property>
                                                                                             <property name="caption_visible">1</property>
                                                                                             <property name="center_pane">0</property>
@@ -6911,7 +6911,7 @@
                         <property name="help"></property>
                         <property name="id">wxID_ANY</property>
                         <property name="kind">wxITEM_NORMAL</property>
-                        <property name="label">MameHub Arrange &amp;Top 10</property>
+                        <property name="label">HubCade Arrange &amp;Top 10</property>
                         <property name="name">top10StatsMenuItem</property>
                         <property name="permission">none</property>
                         <property name="shortcut"></property>
@@ -7073,12 +7073,12 @@
                         <property name="help"></property>
                         <property name="id">wxID_ANY</property>
                         <property name="kind">wxITEM_NORMAL</property>
-                        <property name="label">Mamehub Arrange &amp;Website</property>
-                        <property name="name">main_mamehub_site_MenuItem</property>
+                        <property name="label">HubCade Arrange &amp;Website</property>
+                        <property name="name">main_HubCade_site_MenuItem</property>
                         <property name="permission">none</property>
                         <property name="shortcut"></property>
                         <property name="unchecked_bitmap"></property>
-                        <event name="OnMenuSelection">OnMainMamehubSite</event>
+                        <event name="OnMenuSelection">OnMainHubCadeSite</event>
                         <event name="OnUpdateUI"></event>
                     </object>
                     <object class="wxMenuItem" expanded="0">
@@ -8805,7 +8805,7 @@
             <property name="size">511,554</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE</property>
             <property name="subclass"></property>
-            <property name="title">MameHub Arrange Client Statistics</property>
+            <property name="title">HubCade Arrange Client Statistics</property>
             <property name="tooltip"></property>
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
@@ -14476,7 +14476,7 @@
                                             <property name="style"></property>
                                             <property name="subclass"></property>
                                             <property name="toolbar_pane">0</property>
-                                            <property name="tooltip">Central Method = All located in MAMEHub Images&#x0A;System Method = Parent directory of system/roms</property>
+                                            <property name="tooltip">Central Method = All located in HubCade Images&#x0A;System Method = Parent directory of system/roms</property>
                                             <property name="validator_data_type"></property>
                                             <property name="validator_style">wxFILTER_NONE</property>
                                             <property name="validator_type">wxDefaultValidator</property>
@@ -19608,7 +19608,7 @@
             <property name="size">512,447</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE|wxSTAY_ON_TOP</property>
             <property name="subclass"></property>
-            <property name="title">Welcome to MAMEHub Arrange</property>
+            <property name="title">Welcome to HubCade Arrange</property>
             <property name="tooltip"></property>
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
@@ -20740,7 +20740,7 @@
             <property name="size">377,420</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</property>
             <property name="subclass"></property>
-            <property name="title">MameHub Arrange Server Statistics</property>
+            <property name="title">HubCade Arrange Server Statistics</property>
             <property name="tooltip"></property>
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
@@ -21718,7 +21718,7 @@
             <property name="size">755,453</property>
             <property name="style">wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</property>
             <property name="subclass"></property>
-            <property name="title">MameHub Arrange Top 10</property>
+            <property name="title">HubCade Arrange Top 10</property>
             <property name="tooltip"></property>
             <property name="window_extra_style"></property>
             <property name="window_name"></property>
@@ -22390,7 +22390,7 @@
                                     <property name="proportion">1</property>
                                     <object class="wxStaticBoxSizer" expanded="0">
                                         <property name="id">wxID_ANY</property>
-                                        <property name="label">Youtube Password (NOT YOUR MAMEHUB PASSWORD)</property>
+                                        <property name="label">Youtube Password (NOT YOUR HubCade PASSWORD)</property>
                                         <property name="minimum_size"></property>
                                         <property name="name">sbSizer32</property>
                                         <property name="orient">wxVERTICAL</property>
@@ -22743,7 +22743,7 @@
                                         <property name="gripper">0</property>
                                         <property name="hidden">0</property>
                                         <property name="id">wxID_ANY</property>
-                                        <property name="label">Add &quot;- MAMEHub&quot; to title</property>
+                                        <property name="label">Add &quot;- HubCade&quot; to title</property>
                                         <property name="max_size"></property>
                                         <property name="maximize_button">0</property>
                                         <property name="maximum_size"></property>
@@ -22936,7 +22936,7 @@
                                         <property name="gripper">0</property>
                                         <property name="hidden">0</property>
                                         <property name="id">wxID_ANY</property>
-                                        <property name="label">Add MAMEHub Keywords</property>
+                                        <property name="label">Add HubCade Keywords</property>
                                         <property name="max_size"></property>
                                         <property name="maximize_button">0</property>
                                         <property name="maximum_size"></property>
