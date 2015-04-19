@@ -1,0 +1,19 @@
+* Client
+
+
+
+* Server (Linux)
+install Centos 6.6 x64
+yum install nano python-twisted MySQL-python mysql-server
+
+service mysqld start
+/usr/bin/mysql_secure_installation
+mysql -u root -p
+create database ip2code;
+
+: grab ip2nation from following
+http://www.ip2nation.com/
+
+nano ip2nation.sql
+add 'use ip2code;' to top
+mysql -u root -p < ip2nation.sql
